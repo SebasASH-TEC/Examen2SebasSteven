@@ -11,7 +11,7 @@ public class Test1 {
     @Test
     public void testConvertirNumeroBinario() {
         try {
-            String input = "110"; // 10 en decimal
+            String input = "1010"; // 10 en decimal
             int base = 0; // Binario
             int resultado = Calculadora.convertirNumero(input, base);
 
