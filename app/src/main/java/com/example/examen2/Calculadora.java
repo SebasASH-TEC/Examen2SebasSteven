@@ -1,7 +1,15 @@
 package com.example.examen2;
+import java.util.List;
 public class Calculadora {
-
-    // Método para convertir el número a la base seleccionada (0: Binario, 1: Octal, 2: Decimal, 3: Hexadecimal)
+    public static boolean Encuentra(List<Integer> lista, int elemento) {
+        for (int num : lista) {
+            if (num == elemento) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // Metodo para convertir el número a la base seleccionada (0: Binario, 1: Octal, 2: Decimal, 3: Hexadecimal)
     public static int convertirNumero(String input, int base) {
         int numero = 0;
         try {
@@ -27,7 +35,7 @@ public class Calculadora {
         return numero;
     }
 
-    // Método para realizar operaciones matemáticas (suma, resta, multiplicación, división)
+    // Metodo para realizar operaciones matemáticas (suma, resta, multiplicación, división)
     public static int realizarOperacion(int num1, int num2, String operador) {
         int resultado = 0;
         switch (operador) {
@@ -53,7 +61,7 @@ public class Calculadora {
         return resultado;
     }
 
-    // Método para convertir un número decimal a cualquier base (0: Binario, 1: Octal, 2: Decimal, 3: Hexadecimal)
+    // Metodo para convertir un número decimal a cualquier base (0: Binario, 1: Octal, 2: Decimal, 3: Hexadecimal)
     public static String convertirADestino(int numeroDecimal, int baseDestino) {
         switch (baseDestino) {
             case 0: // Binario
